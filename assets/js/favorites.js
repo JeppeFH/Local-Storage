@@ -21,4 +21,6 @@ export function favorites() {
   }
 
   renderFavoriteList();
+
+  function addToFav() {}
 }

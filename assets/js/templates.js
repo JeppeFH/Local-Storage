@@ -5,7 +5,8 @@ export const productListTmpl = (product) =>
     <p><b>${product.title}</b></p>
     <p><i>${product.price} kr</i></p>
     <img src="${product.image}${product.id}">
-    <button><a href="page.html?id=${product.id}">Se produkt</a></button> 
+    <button><a href="page.html?id=${product.id}">Se produkt</a></button>
+    <button class="favBtn" id="${product.id}">">Føj til favoriter</button>  
     `;
 
 export const productPageTmpl = (product) =>
@@ -18,3 +19,12 @@ export const productPageTmpl = (product) =>
 
 <br>
 `;
+
+export const favListTmpl = (product) =>
+  `
+    <p><b>${product.title}</b></p>
+    <p><i>${product.price} kr</i></p>
+    <img src="${product.image}${product.id}">
+    <button><a href="page.html?id=${product.id}">Se produkt</a></button> 
+    <button id="${product.id}">">Fjern fra favoritter</button> 
+    `;
