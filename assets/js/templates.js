@@ -26,5 +26,5 @@ export const favListTmpl = (product) =>
     <p><i>${product.price} kr</i></p>
     <img src="${product.image}${product.id}">
     <button><a href="page.html?id=${product.id}">Se produkt</a></button> 
-    <button id="${product.id}">">Fjern fra favoritter</button> 
+    <button class="removeBtn" id="${product.id}">Fjern fra favoritter</button> 
     `;

@@ -33,17 +33,32 @@ export function favorites() {
     /* find() anvendes i stedet for filter() da der kun skal findes ét objekt */
     const productToAdd = products.find((product) => product.id == productID);
 
-    favorites.push(productToAdd);
+    const exist = favorites.find((product) => product.id == productToAdd.id);
+    if (!exist) {
+      favorites.push(productToAdd);
 
-    /* Stringify: For at gemme JS objekter i localStorage, skal de først omdannes til tekst/"string" - 
+      /* Stringify: For at gemme JS objekter i localStorage, skal de først omdannes til tekst/"string" - 
     Det sørger "stringify" funktionen for  */
-    local.Storage.setItem("favList", JSON.stringify(favorites));
+      localStorage.setItem("favList", JSON.stringify(favorites));
 
-    renderFavoriteList();
+      renderFavoriteList();
+    } else {
+      console.log("Produktet er allerede tilføjet");
+    }
   }
 
   const favBtn = document.querySelectorAll(".favBtn");
   favBtn.forEach((btn) => {
     btn.addEventListener("click", addToFav);
+  });
+
+  /* hente localstorage ned, tilføje slet funktion, tilføje til localstorage */
+  function removeFromFav() {
+    console.log("Slet funktion");
+  }
+
+  const favRemoveBtn = document.querySelectorAll(".removeBtn");
+  favRemoveBtn.forEach((btn) => {
+    btn.addEventListener("click", removeFromFav);
   });
 }
