@@ -1,0 +1,240 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*Heading sizes*/
+h1 {
+  font-size: ;
+}
+
+h2 {
+  font-size: ;
+}
+
+h3 {
+  font-size: ;
+}
+
+h4 {
+  font-size: ;
+}
+
+h5 {
+  font-size: ;
+}
+
+h6 {
+  font-size: ;
+}
+
+p {
+  font-size: ;
+}
+
+li,
+a {
+  text-decoration: none;
+}
+
+/*Section [Navigation]*/
+nav {
+  height: 100px;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  display: flex;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0 auto;
+  align-items: center;
+}
+
+nav img {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+nav a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-links a:hover {
+  color: tomato;
+  transition: all 250ms ease-in-out;
+}
+
+nav i {
+  font-size: 3.5rem;
+}
+
+.burgerMenuOpen,
+.burgerMenuClose {
+  display: none;
+  color: white;
+}
+
+.signup-btn {
+  display: inline-block;
+  padding: 13px 35px;
+  font-size: 1.6rem;
+  border-radius: 15px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: tomato;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  background-color: rgb(224, 82, 57);
+  transition: all 250ms ease-in-out;
+}
+
+.nav-links a {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-links a:not(.signup-btn)::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 0;
+  display: block;
+  margin-top: 7px;
+  background-color: white;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/*Responsive burgermenu*/
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    position: relative;
+    max-width: 100%;
+    height: 100px;
+    background-color: rgb(42, 42, 42);
+    align-items: center;
+    margin: 0 auto;
+    display: none;
+    flex-direction: column;
+    top: 100px;
+    gap: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 20px 0 20px 0;
+  }
+
+  .burgerMenuOpen {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .burgerMenuOpen.active {
+    display: none;
+  }
+
+  .burgerMenuClose {
+    display: none;
+    margin-right: 20px;
+  }
+
+  .burgerMenuClose.active {
+    display: block;
+  }
+
+  nav img {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+}
+
+/*Section [Hero]*/
+
+/*Section [name]*/
+
+/*Section [name]*/
+
+/*Section [name]*/
+
+/*Section [name]*/
+
+/*Section [name]*/
+
+/*Section [Footer]*/
+
+/*Responsive*/
+@media screen and (max-width: 768px) {
+  /*Heading sizes*/
+  h1 {
+    font-size: ;
+  }
+
+  h2 {
+    font-size: ;
+  }
+
+  h3 {
+    font-size: ;
+  }
+
+  h4 {
+    font-size: ;
+  }
+
+  h5 {
+    font-size: ;
+  }
+
+  h6 {
+    font-size: ;
+  }
+
+  p {
+    font-size: ;
+  }
+
+  /*Section [Hero]*/
+
+  /*Section [name]*/
+
+  /*Section [name]*/
+
+  /*Section [name]*/
+
+  /*Section [Footer]*/
+}
