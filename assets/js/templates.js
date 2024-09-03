@@ -6,7 +6,7 @@ export const productListTmpl = (product) =>
     <p><i>${product.price} kr</i></p>
     <img src="${product.image}${product.id}">
     <button><a href="page.html?id=${product.id}">Se produkt</a></button>
-    <button class="favBtn" id="${product.id}">">Føj til favoriter</button>  
+    <button class="favBtn" id="${product.id}">Føj til favoriter</button>  
     `;
 
 export const productPageTmpl = (product) =>
