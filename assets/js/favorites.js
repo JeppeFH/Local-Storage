@@ -14,6 +14,7 @@ export function favorites() {
   function renderFavoriteList() {
     if (favoriteListContainer) {
       if (favorites.length != 0) {
+        favoriteListContainer.innerHTML = "";
         favorites.forEach((product) => {
           favoriteListContainer.insertAdjacentHTML(
             "beforeend",
@@ -69,10 +70,8 @@ export function favorites() {
     localStorage.setItem("favList", JSON.stringify(favorites));
 
     renderFavoriteList();
-  }
 
-  /* const favRemoveBtn = document.querySelectorAll('.removeBtn')
-        favRemoveBtn.forEach(btn => {
-            btn.addEventListener('click', removeFromFav)
-        }) */
+    /* Hvis favorit-listen er tom, så slettes localStorage helt */
+    if (favorites.length == 0) localStorage.removeItem("favList");
+  }
 }
